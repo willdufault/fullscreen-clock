@@ -1,0 +1,82 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: white;
+}
+
+body
+{
+	background-color: #101010;
+}
+
+label
+{
+	color: white;
+}
+
+option
+{
+	color: white;
+}
+
+select
+{
+	color: white;
+	background-color: #303030;
+}
+
+.text-shadow
+{
+	text-shadow: 1px 1px #101010;
+}
+
+.input-border
+{
+	color: white;
+	background-color: #303030;
+	outline: 1px solid #707070;
+}
+
+#clock
+{
+	color: white;
+	font-size: 250px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+#menu
+{
+	position: absolute;
+	top: 0;
+	transition: 0.5s;
+}
+
+#menu div
+{
+	margin: 10px;
+}
+
+#menu 
+
+.font-size form input
+{
+	width: 40px;
+}
+
+.font-color form input
+{
+	width: 80px;
+}
+
+.bg-color form input
+{
+	width: 80px;
+}

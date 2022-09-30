@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Customizable Fullscreen Clock</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Exo:wght@300&display=swap&" rel="stylesheet">
+	</head>
+	<body>
+		<div id="clock" onload="getTime()" onclick="toggleMenu()"></div>
+		<div id="menu">
+			<div class="text-shadow">Click on the clock to toggle the menu.</div>
+			<div class="font text-shadow">
+				<label>Font:&nbsp;</label>
+				<select id="font-selector" onchange="setFont(this.value)">
+				<option value="Roboto" style="font-family: 'Roboto'">Roboto</option>
+				<option value="Exo" style="font-family: 'Exo'">Exo</option>
+				<option value="Arial" style="font-family: 'Arial'">Arial</option>
+				<option value="Cambria" style="font-family: 'Cambria'">Cambria</option>
+				<option value="Georgia" style="font-family: 'Georgia'">Georgia</option>
+				<option value="Impact" style="font-family: 'Impact'">Impact</option>
+				<option value="monospace" style="font-family: monospace">Monospace</option>
+				</select>
+			</div>
+			<div class="font-size text-shadow">
+				<form>
+					<label>Font Size:&nbsp;</label>
+					<input id="font-size-input" class="input-border" type="text" onkeydown="setFontSize(event, this.value)">
+				</form>
+			</div>
+			<div class="font-color text-shadow">
+				<form>
+					<label>Font Color:&nbsp;</label>
+					<input id="font-color-input" class="input-border" type="text" onkeydown="setFontColor(event, this.value)">
+				</form>
+			</div>
+			<div class="bg-color text-shadow">
+				<form>
+					<label>Background Color:&nbsp;</label>
+					<input id="bg-color-input" class="input-border" type="text" onkeydown="setBGColor(event, this.value)">
+				</form>
+			</div>
+			<div class="show-period text-shadow">
+				<form>
+					<label>Show Period?&nbsp;</label>
+					<input type="checkbox" checked="true" onclick="togglePeriod()">
+				</form>
+			</div>
+			<div class="show-leading-zero text-shadow">
+				<form>
+					<label>Show Leading 0?&nbsp;</label>
+					<input type="checkbox" onclick="toggleZero()">
+				</form>
+			</div>
+		</div>
+	</body>
+	<script src="main.js"></script>
+</html>
